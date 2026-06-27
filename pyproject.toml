@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,7 +8,40 @@ version = "0.1.0"
 description = "A procedurally drawn, gently swaying cannabis leaf for your terminal"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "GPL-3.0-or-later"
+license-files = ["COPYING"]
+authors = [
+    { name = "Clint Moyer" },
+]
+keywords = ["ascii-art", "braille", "curses", "terminal"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: Console :: Curses",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Artistic Software",
+    "Topic :: Terminals",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "twine>=5",
+]
+
+[project.urls]
+Homepage = "https://github.com/clintmoyer/cannaleaf"
+Issues = "https://github.com/clintmoyer/cannaleaf/issues"
+Source = "https://github.com/clintmoyer/cannaleaf"
 
 [project.scripts]
 cannaleaf = "cannaleaf.app:main"
