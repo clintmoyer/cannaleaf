@@ -22,26 +22,6 @@ A procedurally drawn, gently swaying cannabis leaf for your terminal.
                              ⠉
 ```
 
-## Install
-
-```sh
-python3 -m pip install cannaleaf
-cannaleaf
-```
-
-## Run from source
-
-```sh
-python3 -m cannaleaf
-```
-
-Or install it as a command:
-
-```sh
-pip install -e .
-cannaleaf
-```
-
 ## Options
 
 ```
@@ -65,33 +45,3 @@ cannaleaf
 | `space` | pause the sway                              |
 | `?`     | help overlay                                |
 | `q`     | quit                                        |
-
-The leaf re-centers and re-scales itself on terminal resize.
-
-## Tests
-
-```sh
-python3 -m unittest discover -s tests
-```
-
-## Build and publish
-
-Build the source distribution and wheel:
-
-```sh
-python3 -m pip install -e ".[dev]"
-python3 -m build
-python3 -m twine check dist/*
-```
-
-Upload to TestPyPI first:
-
-```sh
-python3 -m twine upload --repository testpypi dist/*
-```
-
-Then upload the same checked artifacts to PyPI:
-
-```sh
-python3 -m twine upload dist/*
-```
